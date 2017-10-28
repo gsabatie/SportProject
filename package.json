@@ -9,7 +9,13 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "test": "karma start ./test-config/karma.conf.js",
+    "test-ci": "karma start ./test-config/karma.conf.js --single-run",
+    "test-coverage": "karma start ./test-config/karma.conf.js --coverage",
+    "e2e": "npm run e2e-update && npm run e2e-test",
+    "e2e-test": "protractor ./test-config/protractor.conf.js",
+    "e2e-update": "webdriver-manager update --standalone false --gecko false"
   },
   "dependencies": {
     "@angular/common": "4.4.3",
@@ -41,6 +47,22 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.0.0",
+    "@types/jasmine": "^2.6.2",
+    "@types/node": "^8.0.44",
+    "angular-cli": "^1.0.0-beta.28.3",
+    "angular-mocks": "^1.6.6",
+    "angular2-template-loader": "^0.6.2",
+    "jasmine": "^2.8.0",
+    "jasmine-core": "^2.8.0",
+    "jasmine-ts": "^0.2.1",
+    "karma": "^1.7.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-typescript-preprocessor": "^0.3.1",
+    "null-loader": "^0.1.1",
+    "protractor": "^5.2.0",
+    "ts-loader": "^3.0.2",
+    "ts-node": "^3.3.0",
     "typescript": "2.3.4"
   },
   "description": "An Ionic project",
