@@ -4,15 +4,15 @@ import { Platform } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { Page1 } from '../page1/page1';
+import { HomePage } from '../home/home'
 
 @IonicPage()
 @Component({
-    selector: 'login-component',
+    selector: 'page-logout',
     templateUrl: 'login.html',
     styles: ['login.scss']
 })
-export class LoginComponent {
+export class LoginPage {
     private notConnected: boolean = false;
     constructor(public navCtrl: NavController, private platform: Platform, private fb: Facebook, public statusBar: StatusBar) { }
 
@@ -20,7 +20,7 @@ export class LoginComponent {
         this.platform.ready().then(_ => {
             this.fb.getLoginStatus().then((res: FacebookLoginResponse) => {
                 if (res.status === 'connected') {
-                    this.navCtrl.setRoot(Page1);
+                    this.navCtrl.setRoot(HomePage);
                     this.statusBar.styleDefault();
                 } else {
                     this.notConnected = true;
@@ -32,7 +32,7 @@ export class LoginComponent {
     connect(): void {
         this.fb.login(['email', 'public_profile']).then((res: FacebookLoginResponse) => {
             this.notConnected = false;
-            this.navCtrl.setRoot(Page1);
+            this.navCtrl.setRoot(HomePage);
             this.statusBar.styleDefault();
         }).catch((e) => {
             console.log(e);
