@@ -7,7 +7,7 @@ import { LoginPage } from '../pages/login/login';
 import { LogoutPage } from '../pages/logout/logout';
 import { HomePage } from '../pages/home/home';
 import { WorkoutsPage } from '../pages/workouts/workouts';
-import { ExercisesPage } from '../pages/exercises/exercises';
+import { ExercicesPage } from '../pages/exercices/exercices';
 
 
 @Component({
@@ -28,7 +28,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage, 'icon': 'home' },
       { title: 'Workouts', component: WorkoutsPage, icon: 'american-football' },
-      { title: 'Exercises', component: ExercisesPage, icon: 'albums' }
+      { title: 'Exercices', component: ExercicesPage, icon: 'albums' }
     ];
   }
 

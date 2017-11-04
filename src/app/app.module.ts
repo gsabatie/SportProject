@@ -8,7 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { LogoutPage } from '../pages/logout/logout';
 import { WorkoutsPage } from '../pages/workouts/workouts';
-import { ExercisesPage } from '../pages/exercises/exercises';
+import { ExercicesPage } from '../pages/exercices/exercices';
 
 import { NativeStorage } from '@ionic-native/native-storage';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,7 +21,7 @@ import { MagicBallProvider } from '../providers/magic-ball/magic-ball';
     HomePage,
     LoginPage,
     LogoutPage,
-    ExercisesPage,
+    ExercicesPage,
     WorkoutsPage
   ],
   imports: [
@@ -34,7 +34,7 @@ import { MagicBallProvider } from '../providers/magic-ball/magic-ball';
     HomePage,
     LogoutPage,
     LoginPage,
-    ExercisesPage,
+    ExercicesPage,
     WorkoutsPage
   ],
   providers: [
