@@ -7,6 +7,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { LogoutPage } from '../pages/logout/logout';
+import { WorkoutsPage } from '../pages/workouts/workouts';
+import { ExercisesPage } from '../pages/exercises/exercises';
 
 import { NativeStorage } from '@ionic-native/native-storage';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,6 +21,8 @@ import { MagicBallProvider } from '../providers/magic-ball/magic-ball';
     HomePage,
     LoginPage,
     LogoutPage,
+    ExercisesPage,
+    WorkoutsPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,9 @@ import { MagicBallProvider } from '../providers/magic-ball/magic-ball';
     MyApp,
     HomePage,
     LogoutPage,
-    LoginPage
+    LoginPage,
+    ExercisesPage,
+    WorkoutsPage
   ],
   providers: [
     Facebook,

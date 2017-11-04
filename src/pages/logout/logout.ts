@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 
 import { LoginPage } from '../login/login';
@@ -13,13 +13,11 @@ import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
-  selector: 'page-logout',
-  templateUrl: 'logout.html',
+    template: ''
 })
 export class LogoutPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public fb: Facebook) {
-  }
+  constructor(public navCtrl: NavController, public fb: Facebook) {}
 
   ionViewDidLoad() {
     this.fb.logout().then((res: FacebookLoginResponse) => {
